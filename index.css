@@ -204,6 +204,18 @@ button.search {
    gap: 1em;
 }
 
+.icon-big {
+   filter: 
+      brightness(0) 
+      saturate(100%) 
+      invert(46%) 
+      sepia(3%) 
+      saturate(2%) 
+      hue-rotate(325deg) 
+      brightness(101%) 
+      contrast(81%);
+}
+
 .movies-list {
    width: calc(100% - 4em);
    display: none;
