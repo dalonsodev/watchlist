@@ -79,6 +79,11 @@ function addToWatchlist(movieId, title) {
 }
 
 function showNotification(message) {
+   const existingNotification = document.querySelector(".notification")
+   if (existingNotification) {
+      existingNotification.remove()
+   }
+
    const notification = document.createElement("div")
    notification.className = "notification"
    notification.textContent = message
