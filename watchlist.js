@@ -7,7 +7,6 @@ function initializeWatchlist() {
    let watchlistData
    if (storedData) {
       watchlistData = JSON.parse(storedData)
-      localStorage.setItem("watchlistData", JSON.stringify(watchlistData))
    }
    else {
       watchlistData = { moviesIDs: [] }
