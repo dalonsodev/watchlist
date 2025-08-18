@@ -371,6 +371,7 @@ h2.name {
    height: 24px;
    position: relative;
    margin-right: 0.25em;
+   flex-shrink: 0;
 }
 
 .notification.visible {
@@ -446,10 +447,6 @@ h2.name {
       gap: 0.656em;
    }
 
-   /* .movie-info-container {
-      gap: 0.5em;
-   } */
-
    .movie-details {
       gap: 0.75em;
    }
@@ -461,6 +458,10 @@ h2.name {
       line-clamp: 4;
       overflow: hidden;
       text-overflow: ellipsis;
+   }
+
+   .notification {
+      width: calc(100vw - 3em);
    }
 }
 
