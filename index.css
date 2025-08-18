@@ -149,6 +149,11 @@ body {
    max-width: 16px;
 }
 
+input.search-bar,
+button.search {
+   font-size: 16px;
+}
+
 input.search-bar {
    border: none;
    line-height: 38px;
