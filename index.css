@@ -149,10 +149,10 @@ body {
    max-width: 16px;
 }
 
-input.search-bar,
+/* input.search-bar,
 button.search {
    font-size: 16px;
-}
+} */
 
 input.search-bar {
    border: none;
