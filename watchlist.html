@@ -1,38 +1,38 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" >
-        <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <!-- Google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <header class="site-header">
-            <div class="header-container container">
-                <h1 class="page-title">My Watchlist</h1>
-                <nav class="links-wrapper">
-                    <a class="main-link" href="index.html">Search for movies</a>
-                </nav>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1" >
+      <!-- Favicons -->
+      <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <!-- Google fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+      <!-- Stylesheets -->
+      <link rel="stylesheet" href="index.css">
+   </head>
+   <body>
+      <header class="site-header">
+         <div class="header-container container">
+            <h1 class="page-title">My Watchlist</h1>
+            <nav class="links-wrapper">
+               <a class="main-link" href="index.html">Search for movies</a>
+            </nav>
+         </div>
+      </header>
+      <main class="main-content">
+         <div class="movies-container container">
+            <ul id="movies-watchlist" class="movies-list"></ul>
+            <div class="empty-state">
+               <img class="icon-big" src="icons/film-light.png" alt="Film icon">
+               <p class="body-message">Your watchlist is looking a little empty...</p>
+               <a class="plus-link" href="index.html">Let's add some movies!</a>
             </div>
-        </header>
-        <main class="main-content">
-            <div class="movies-container container">
-                <ul id="movies-watchlist" class="movies-list"></ul>
-                <div class="empty-state">
-                    <img class="icon-big" src="icons/film-light.png" alt="Film icon">
-                    <p class="body-message">Your watchlist is looking a little empty...</p>
-                    <a class="plus-link" href="index.html">Let's add some movies!</a>
-                </div>
-            </div>
-        </main>
-        <script src="watchlist.js"></script>
-    </body>
+         </div>
+      </main>
+      <script src="watchlist.js"></script>
+   </body>
 </html>
