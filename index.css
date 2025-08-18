@@ -63,6 +63,13 @@ a:active {
    text-decoration: none;
 }
 
+a:focus-visible,
+button:focus-visible {
+   outline: none;
+   box-shadow: 0 0 0 2px var(--search-btn-bg);
+   border-radius: 6px;
+}
+
 ul, li {
    list-style-type: none;
 }
@@ -73,11 +80,12 @@ ul, li {
 
 
 /* Layout elements */
+
 body {
    font-family: var(--main-font);
    max-width: 550px;
    margin: 0 auto;
-   height: 100vh;
+   min-height: 100vh;
    display: flex;
    flex-direction: column;
    background: var(--body-bg);
@@ -156,8 +164,6 @@ input.search-bar:focus {
 }
 
 .search-container:focus-within {
-   /* outline: 1px solid rgba(255, 0, 0, 0.1); */
-   /* outline-offset: 2px; */
    box-shadow: var(--search-focus-shadow);
 }
 
@@ -171,6 +177,7 @@ button.search {
    border-top-right-radius: 6px;
    border-bottom-right-radius: 6px;
    cursor: pointer;
+   align-self: stretch;
 }
 
 .movies-container {
@@ -237,16 +244,21 @@ button.search {
    gap: 1.313em;
    border-bottom: 2px solid var(--separator-color);
    padding: 1.313em 0;
+   align-items: flex-start;
 }
 
 .movie-cover {
    max-width: 100px;
+   width: 100%;
+   height: auto;
+   display: block;
 }
 
 .movie-info-container {
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
+   gap: 0.5em;
 }
 
 .movie-title {
@@ -329,7 +341,8 @@ h2.name {
    justify-content: center;
    align-items: center;
    text-align: center;
-   max-width: calc(100vw - 6em);
+   width: calc(100vw - 6em);
+   max-width: 600px;
    line-height: 1.5;
    border-radius: 6px;
    left: 0;
@@ -392,13 +405,62 @@ h2.name {
    .notification::before {
       background-image: url("icons/added-dark.png");
    }
+
+   a:focus-visible,
+   button:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 2px var(--search-btn-bg);
+      border-radius: 6px;
+   }
+
+   button.search:focus-visible {
+      box-shadow: 0 0 0 2px var(--search-btn-color);
+   }
+}
+
+@media (max-width: 550px) {
+   .container {
+      margin: 0 1em;
+   }
+
+   .search-container {
+      margin-top: -1.25em;
+   }
+
+   .search-container,
+   .movies-list {
+      width: calc(100% - 2em);
+   }
+
+   .movies-container:has(.movies-list:not(:empty)) {
+      justify-content: flex-start;
+      margin-top: 0;
+   }
+
+   .movie {
+      gap: 0.656em;
+   }
+
+   /* .movie-info-container {
+      gap: 0.5em;
+   } */
+
+   .movie-details {
+      gap: 0.75em;
+   }
+
+   .movie-desc {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      line-clamp: 4;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   }
 }
 
 @media (min-width: 551px) {
    html {
-      /* background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%); --> Gray */
-      /* background: linear-gradient(135deg, #F9FAFB 0%, #A5B4FC 50%, #E5E7EB 100%); */
-      /* background: linear-gradient(135deg, #F9FAFB 0%, #FCA5A5 40%, #E5E7EB 100%); ---> Netflix inspired */
       background: linear-gradient(135deg, #ffffff 0%, #f56565 50%, #e50914 100%);
    }
 }
